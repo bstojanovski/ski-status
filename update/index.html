@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Update status</title>
+    <meta name="description" content="Popova Sapka Ski Status">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.min.css">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <h4>Update status</h4>
+    <div class="main update col-md-3" ng-app="app-skilift">
+        <ul ng-controller="Skilifts">
+            <li ng-repeat="lift in lifts">
+                <h5> {{lift.name}}
+                    <span class="update-btn btn btn-md btn-{{lift.badgeclass}}" id="{{lift.id}}" status="{{lift.status}}">{{lift.statustext}}</button>
+                </h5>
+            </li>
+        </ul>
+    </div>
+</body>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/angular.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
+<script src="../js/md5.js"></script>
+<script src="../js/script.js"></script>
+
+</html>
